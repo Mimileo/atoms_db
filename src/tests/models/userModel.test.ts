@@ -1,12 +1,12 @@
 import mongoose from 'mongoose';
 import { MongoMemoryServer } from 'mongodb-memory-server';
-import User, { IUser } from '../../models/Users';
+import User  from '../../models/Users';
 import UserRole from '../../models/enums/userRole';
-import { connect } from 'http2';
 import connectToDatabase from '../../config/database';
 
 
 describe('User model', () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   let mongoServer: MongoMemoryServer;
 
   beforeAll(async () => {

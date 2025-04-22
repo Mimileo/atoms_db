@@ -1,9 +1,5 @@
 import mongoose from 'mongoose';
-import { MongoMemoryServer } from 'mongodb-memory-server';
-
 import Course from '../../models/Course';
-import Step from '../../models/Step';
-import Lecture from '../../models/Lecture';
 import Problem from '../../models/Problem';
 import connectToDatabase from '../../config/database';
 import { updateCoursePoints } from '../../services/utils/updateCoursePoints';

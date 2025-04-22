@@ -37,6 +37,8 @@ async function markProblemCompleted(userId: ObjectId, courseId: ObjectId, stepId
         { new: true, upsert: true }
     );
 
+    console.log(problemProgress);
+
     // Update UserStepProgress based on the completed problem
     const stepProgress = await UserStepProgress.findOne({ userId, courseId, stepId });
 

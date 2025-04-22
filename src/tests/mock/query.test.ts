@@ -5,12 +5,11 @@ import Course from '../../models/Course';
 import Step from '../../models/Step';
 import Lecture from '../../models/Lecture';
 import Problem from '../../models/Problem';
-import { connect } from 'http2';
 import connectToDatabase from '../../config/database';
 import { updateCoursePoints } from '../../services/utils/updateCoursePoints';
-import { access } from 'fs';
 
 describe('Create Course with Steps, Lectures, and Problems', () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   let mongoServer: MongoMemoryServer;
 
   beforeAll(async () => {
@@ -69,6 +68,8 @@ describe('Create Course with Steps, Lectures, and Problems', () => {
       courseId: course._id,
       stepId: step._id
     });
+
+    console.log(problem2, problem1);
 
     await updateCoursePoints(course._id);
     // 5. Assertions
